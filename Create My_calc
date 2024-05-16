@@ -1,0 +1,197 @@
+import java.util.Scanner;
+public class Calculator {
+	//_________________________________
+	
+	public static int add(int a, int b){
+	return a+b;
+	}
+	
+	public static double add(double a, double b){
+	return a+b;
+	}
+	
+	public static double add(int a, double b){
+	return a+b;
+	}
+	
+	public static double add(double a, int b){
+	return a+b;
+	}
+	
+	//__________________________________
+	
+	public static void performAddition(){
+		
+	System.out.println("Enter the first number");
+	double firstNumber=in.nextDouble();
+	
+	System.out.println("Enter the second number");
+	double secondNumber=in.nextDouble();
+	
+    if(firstNumber%1==0 && secondNumber%1==0)
+	System.out.println("sum = "+add((int) firstNumber, (int) secondNumber));
+	if(firstNumber%1!=0 && secondNumber%1!=0)
+	System.out.println("sum = "+add((double) firstNumber, (double) secondNumber));
+	if(firstNumber%1==0 && secondNumber%1!=0)
+	System.out.println("sum = "+add((int) firstNumber, (double) secondNumber));
+	if(firstNumber%1!=0 && secondNumber%1==0)
+	System.out.println("sum = "+add((double) firstNumber, (int) secondNumber));
+	}
+	
+	//_________________________________
+	
+	public static int subtract(int a, int b){
+	return a-b;
+	}
+	
+	public static double subtract(double a, double b){
+	return a-b;
+	}
+	
+	public static double subtract(int a, double b){
+	return a-b;
+	}
+	
+	public static double subtract(double a, int b){
+	return a-b;
+	}
+	
+	//__________________________________
+	
+   public static void performSubtraction(){
+		
+	System.out.println("Enter the first number");
+	double firstNumber=in.nextDouble();
+	
+	System.out.println("Enter the second number");
+	double secondNumber=in.nextDouble();
+	
+    	if(firstNumber%1==0 && secondNumber%1==0)
+	System.out.println("minus = "+subtract((int) firstNumber, (int) secondNumber));
+		if(firstNumber%1!=0 && secondNumber%1!=0)
+	System.out.println("minus = "+subtract((double) firstNumber, (double) secondNumber));
+		if(firstNumber%1==0 && secondNumber%1!=0)
+	System.out.println("minus = "+subtract((int) firstNumber, (double) secondNumber));
+		if(firstNumber%1!=0 && secondNumber%1==0)
+   System.out.println("minus = "+subtract((double) firstNumber, (int) secondNumber));
+	}
+
+	//_________________________________
+	
+	public static int Multiply(int a, int b){
+	return a*b;
+	}
+	
+	public static double Multiply(double a, double b){
+	return a*b;
+	}
+	
+	public static double Multiply(int a, double b){
+	return a*b;
+	}
+	
+	public static double Multiply(double a, int b){
+	return a*b;
+	}
+	
+	//__________________________________
+	
+public static void performMultiplication(){
+		
+	System.out.println("Enter the first number");
+	double firstNumber=in.nextDouble();
+	
+	System.out.println("Enter the second number");
+	double secondNumber=in.nextDouble();
+	
+	if(firstNumber%1==0 && secondNumber%1==0)
+    System.out.println("Multiply = "+Multiply((int) firstNumber, (int) secondNumber));
+	if(firstNumber%1!=0 && secondNumber%1!=0)
+		
+	System.out.println("Multiply = "+Multiply((double) firstNumber, (double) secondNumber));
+	
+	if(firstNumber%1==0 && secondNumber%1!=0)
+    System.out.println("Multiply = "+Multiply((int) firstNumber, (double) secondNumber));
+	if(firstNumber%1!=0 && secondNumber%1==0)
+	System.out.println("Multiply = "+Multiply((double) firstNumber, (int) secondNumber));
+	}
+	
+		//_________________________________
+	
+	public static int division(int a, int b){
+	return a/b;
+	}
+	
+	public static double division(double a, double b){
+	return a/b;
+	}
+	
+	public static double division(int a, double b){
+	return a/b;
+	}
+	
+	public static double division(double a, int b){
+	return a/b;
+	}
+	
+	//__________________________________
+	
+	public static void performDivision(){
+		
+	System.out.println("Enter the first number");
+	double firstNumber=in.nextDouble();
+	
+	System.out.println("Enter the second number");
+	double secondNumber=in.nextDouble();
+	
+	if(firstNumber%1==0 && secondNumber%1==0)
+    System.out.println("division = "+division((int) firstNumber, (int) secondNumber));
+	
+	if(firstNumber%1!=0 && secondNumber%1!=0)
+	System.out.println("division = "+division((double) firstNumber, (double) secondNumber));
+	
+	if(firstNumber%1==0 && secondNumber%1!=0)
+	System.out.println("division = "+division((int) firstNumber, (double) secondNumber));
+	
+	if(firstNumber%1!=0 && secondNumber%1==0)
+	System.out.println("division = "+division((double) firstNumber, (int) secondNumber));
+	}
+		
+public static Scanner in=new Scanner(System.in);
+	
+	public static void main(String[] args) {
+	int turningOff=1;
+	do{
+	
+	System.out.println("\nEnter your choice:");
+	System.out.println("\n[1-to add (+), 2-to subtract (-), 3-to multiply (*), 4-to divide (/),    5-to subtract (!)]");
+	char userChoice=in.next().charAt(0);
+	switch (userChoice){
+		
+	case '+' : 
+	performAddition();
+	break;
+	
+	case '-' :
+	performSubtraction();
+	break;
+	
+	case '*' :
+	performMultiplication();
+	break;
+	
+	case '/':
+	performDivision();
+	break;
+	
+	case '!':
+	turningOff=0;
+	break;
+	
+	default :
+	System.out.println("Re-enter");
+	}
+	}while(turningOff!=0);
+    
+	}
+}
